@@ -1,9 +1,19 @@
 name: Run tests
 description: 'runs phpunit test uisng the stubs submodule'
+inputs:
+  php-version:
+  description: 'The version of PHP used for the checks'
+  required: false
+  
+
 
 runs:
   using: "composite"
   steps:
+      - if: ${{ inputs.php-version }} == ''
+        run: echo no version
+      - if: ${{ inputs.php-version }}
+        run: echo ${{ inputs.php-version }}
       - run: wget https://phar.phpunit.de/phpunit.phar
         shell: bash
       - run: phpdbg -qrr phpunit.phar tests --configuration tests/phpunit.xml
