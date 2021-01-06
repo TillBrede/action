@@ -1,5 +1,5 @@
-name: test
-description: 'runs phpunit test'
+name: Run tests
+description: 'runs phpunit test uisng the stubs submodule'
 
 runs:
   using: "composite"
