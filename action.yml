@@ -10,7 +10,7 @@ inputs:
 runs:
   using: "composite"
   steps:
-      - run: wget https://phar.phpunit.de/phpunit${{ input.phpunit-version }}.phar
+      - run: wget https://phar.phpunit.de/phpunit${{ inputs.phpunit-version }}.phar
         shell: bash
       - run: phpdbg -qrr phpunit.phar tests --configuration tests/phpunit.xml
         shell: bash
