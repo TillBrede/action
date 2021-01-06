@@ -5,8 +5,6 @@ description: 'Runs phpunit test uisng the stubs submodule'
 runs:
   using: "composite"
   steps:
-      - run: echo ${{ inputs.php-version }}
-        shell: bash
       - run: wget https://phar.phpunit.de/phpunit.phar
         shell: bash
       - run: phpdbg -qrr phpunit.phar tests --configuration tests/phpunit.xml
