@@ -10,11 +10,7 @@ inputs:
 runs:
   using: "composite"
   steps:
-      - if: !${{ inputs.php-version }}
-        run: echo no version
-        shell: bash
-      - if: ${{ inputs.php-version }}
-        run: echo ${{ inputs.php-version }}
+      - run: echo ${{ inputs.php-version }}
         shell: bash
       - run: wget https://phar.phpunit.de/phpunit.phar
         shell: bash
