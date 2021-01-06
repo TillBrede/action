@@ -4,7 +4,7 @@ description: 'runs phpunit test'
 runs:
   using: "composite"
   steps:
-      - run: wget https://cs.symfony.com/download/php-cs-fixer-v2.phar
+      - run: wget https://phar.phpunit.de/phpunit.phar
         shell: bash
       - run: phpdbg -qrr phpunit.phar tests --configuration tests/phpunit.xml
         shell: bash
