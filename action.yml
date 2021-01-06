@@ -2,6 +2,7 @@ name: test
 description: 'runs phpunit test'
 
 runs:
+  using: "composite"
   steps:
       - run: wget https://cs.symfony.com/download/php-cs-fixer-v2.phar
         shell: bash
