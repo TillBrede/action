@@ -2,8 +2,8 @@ name: Run tests
 description: 'runs phpunit test uisng the stubs submodule'
 inputs:
   php-version:
-  description: 'The version of PHP used for the checks'
-  required: false
+    description: 'The version of PHP used for the checks'
+    required: false
   
 
 
