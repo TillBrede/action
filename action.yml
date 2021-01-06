@@ -1,4 +1,5 @@
 name: test
+description: 'runs phpunit test'
 
 runs:
   steps:
