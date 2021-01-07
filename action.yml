@@ -10,6 +10,9 @@ inputs:
 runs:
   using: "composite"
   steps:
+      - if: false
+        run: echo 'asdf'
+        shell: bash
       - run: wget https://phar.phpunit.de/phpunit${{ inputs.phpunit-version }}.phar
         shell: bash
       - run: phpdbg -qrr phpunit.phar tests --configuration tests/phpunit.xml
