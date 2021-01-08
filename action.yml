@@ -10,13 +10,5 @@ inputs:
 runs:
   using: "composite"
   steps:
-       - run: |
-          if [ -z {{inputs.phpunit-versio}}" ];
-          then wget https://phar.phpunit.de/phpunit-${{ inputs.phpunit-version }}.phar;
-          else wget https://phar.phpunit.de/phpunit.phar;
+       - run: chmod +x ${{ github.action_path }}/test/script.sh
          shell: bash
-       - run: |
-         if [ -z {{inputs.phpunit-versio}}" ];
-         then phpdbg -qrr phpunit.phar tests --configuration tests/phpunit.xml;
-         else phpdbg -qrr phpunit-${{ inputs.phpunit-version }}.phar tests --configuration tests/phpunit.xml;
-        shell: bash
