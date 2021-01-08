@@ -10,5 +10,5 @@ inputs:
 runs:
   using: "composite"
   steps:
-       - run: chmod +x $GITHUB_ACTION_PATH/script.sh
+       - run: chmod +x $GITHUB_ACTION_PATH/script.sh {{ inputs.phpunit-version }}
          shell: bash
