@@ -10,5 +10,5 @@ inputs:
 runs:
   using: "composite"
   steps:
-       - run: chmod +x ${{ github.action_path }}/test/script.sh
+       - run: chmod +x $GITHUB_ACTION_PATH/script.sh
          shell: bash
