@@ -1,8 +1,8 @@
 if [ -z $1 ]
 then
-  wget https://phar.phpunit.de/phpunit-$1.phar
-else
   wget https://phar.phpunit.de/phpunit.phar
+else
+  wget https://phar.phpunit.de/phpunit-$1.phar
 fi
 
 if [ -z $1 ]
